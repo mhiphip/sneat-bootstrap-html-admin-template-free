@@ -1,0 +1,8 @@
+{datalabels: {color: function(context) {
+var value = context.dataset
+.backgroundColor[context.dataIndex];
+return lightOrDark(value)==`light` ? 'dark' : 'white';}, font: {size: 10, weight: "bold"},
+formatter: (value, context) => {
+var lb = context.dataset.percentage
+[context.dataIndex]; return lb.toFixed(2)+"%";}
+}, 
